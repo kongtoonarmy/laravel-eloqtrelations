@@ -17,6 +17,12 @@ class MyTest extends TestCase {
 
 	}
 
+	public function testSomethingIsTrue()
+    {
+		$response = $this->call($method, $uri, $parameters, $cookies, $files, $server, $content);
+        $this->assertTrue(true);
+    }
+
 
 
 }
