@@ -5,7 +5,7 @@
 	<title>Articles</title> 
 </head>
 <body>
-	@foreach ($articles as $article)
+	@foreach ($country->articles as $article)
 		<h1>{{ $article->title }} <small>Posted by {{ $article->user->name }}</small></h1> 
 
 		<p>{{ $article->body }}</p>

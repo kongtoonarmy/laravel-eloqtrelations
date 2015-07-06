@@ -8,11 +8,12 @@
 	<h1>{{ $user->name }}'s Profile</h1>
 
 	<p>
-		<strong>Country: </strong> {{ $user->address->country }}
+		<strong>Address: </strong> {{ $user->address->country }} <br>
+		<strong>Country: </strong> {{ $user->country->name }}
 	</p>
 
 	<p>
-		<strong>Roles: </strong>
+		<strong>Roles: </strong> 
 		<ul>
 		@foreach ($user->roles as $role)
 			<li>{{ $role->name }}</li>

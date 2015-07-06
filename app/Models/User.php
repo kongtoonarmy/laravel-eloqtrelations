@@ -42,4 +42,9 @@ class User extends Model {
 		return $this->belongsToMany('App\Models\Role');
 	}
 
+	public function country()
+	{
+		return $this->belongsTo('App\Models\Country');
+	}
+
 }

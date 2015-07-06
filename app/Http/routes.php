@@ -24,6 +24,7 @@ Route::controllers([
 
 use App\Models\Article;
 use App\Models\User;
+use App\Models\Country;
 
 Route::get('/', function() {
 
@@ -39,8 +40,10 @@ Route::get('/profile/{username}', function($username) {
 	return View::make('profile')->with('user', $user);
 });
 
+Route::get('/posts/country/{countryId}', function($countryId) {
 
-Route::get('/article/count', function() {
+	$country = Country::findOrFail($countryId);
 
-	return Article::all()->count();
+	return View::make('country_posts')->with('country', $country);
 });
+
