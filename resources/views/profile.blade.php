@@ -22,9 +22,16 @@
 	</p>
 
 	<hr>
+	<h2>Article</h2>
 	@foreach ($user->articles as $article)
 		<h3>{{ $article->title }}</h3>
 		<p>{{ $article->body }}</p>
+	@endforeach 
+
+	<hr>
+	<h3>Comment</h3>
+	@foreach ($user->comments as $comment)
+		<p>{{ $comment->body }}</p>
 	@endforeach 
 </body>
 </html> 
