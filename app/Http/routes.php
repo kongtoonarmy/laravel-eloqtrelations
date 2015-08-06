@@ -46,4 +46,3 @@ Route::get('/posts/country/{countryId}', function($countryId) {
 
 	return View::make('country_posts')->with('country', $country);
 });
-
